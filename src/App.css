@@ -1,0 +1,254 @@
+.container {
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cards {
+  height: 80vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 250px;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  border: 0.5px solid var(--windows-stroke-glass-specular, rgba(255, 255, 255, 0.40));
+  background: var(--windows-glass, rgba(0, 0, 0, 0.20));
+  background-blend-mode: luminosity;
+  /* Blur */
+  backdrop-filter: blur(50px);
+}
+
+.card h2 {
+  text-transform: capitalize;
+  padding-bottom: 0.5em;
+  font-size: large;
+  font-weight: 500;
+}
+
+.card p {
+  text-transform: capitalize !important;
+  font-size: small;
+  padding: 0 0.5em;
+  text-align: justify;
+}
+
+.app {
+  width: 70vw;
+  height: 80vh;
+  border-radius: 30px;
+  border: 1px solid var(--windows-stroke-glass-specular, rgba(255, 255, 255, 0.1));
+  background: var(--windows-glass, rgba(128, 128, 128, 0.30));
+  background-blend-mode: luminosity;
+  /* Blur */
+  backdrop-filter: blur(50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 5vw;
+}
+
+.input {
+  padding: 1em 0;
+}
+
+.render {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em 2em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+.renderc {
+  width: 100%;
+}
+
+.search input {
+  width: 300px;
+  border: none;
+  border-radius: 16px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 5px 15px;
+  transition: background-color 0.05s ease-in-out;
+}
+
+.search input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  /* You can specify any color you prefer */
+}
+
+.search input:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.search input:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.word {
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.pronunciation {
+  margin-top: -0.6em;
+  padding: 0 0 1.5em;
+}
+
+.worddef {
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+.def {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.point {
+  font-size: 10px;
+}
+
+.speech {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.speech button {
+  margin-top: -2.5em;
+  font-size: 13px;
+}
+
+.example {
+  padding-top: 1.5em;
+}
+
+.suggestions {
+  padding-top: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.suggestions p {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 0.2em 0.8em;
+  border-radius: 5px;
+}
+
+.wodw {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  padding: 0.5em 2em;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+.example-item {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  .container {
+    justify-content: start;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .render {
+    padding: 0.5em 0.5em;
+  }
+
+  .search input {
+    width: 250px;
+  }
+
+  .cards {
+    padding-top: 2em;
+    width: 85%;
+    justify-content: start;
+  }
+
+  .wod {
+    display: none;
+  }
+
+  .logo {
+    height: 12vh;
+    width: auto;
+    padding-bottom: 1em;
+  }
+
+  .app {
+    width: 90%;
+    height: 75vh;
+  }
+}
+
+/* Small Devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+
+  .app {
+    width: 60vw;
+    padding: 2vh 2vw;
+  }
+
+  .cards {
+    width: 30vw;
+  }
+}
+
+/* Medium Devices (small laptops and large tablets) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .app {
+    width: 60vw;
+    padding: 2vh 2vw;
+  }
+
+  .cards {
+    width: 30vw;
+  }
+}
+
+/* Large Devices (desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* Your CSS rules for large screens (desktops) go here */
+}
+
+/* Extra Large Devices (large desktops and TVs) */
+@media (min-width: 1201px) {}
